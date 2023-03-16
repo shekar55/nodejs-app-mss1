@@ -25,13 +25,13 @@ pipeline {
         }
       
          stage('executesonarqubereport') {
-             steps {
+             steps  {
                 // Run tests
                 nodejs(nodeJSInstallationName: 'nodejs18.6.0'){
                 sh "npm run sonar"
             }
         }  
-      
+         }
         stage('Deploy') {
             steps {
                 // Deploy to production server
