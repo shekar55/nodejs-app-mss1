@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    nodejs(nodeJSInstallationName: 'nodejs18.6.0'){
+    }
 
     stages {
         stage('Build') {
@@ -25,10 +27,9 @@ pipeline {
          stage('executesonarqubereport') {
              steps  {
                 // Run tests
-                nodejs(nodeJSInstallationName: 'nodejs18.6.0'){
                 sh "npm run sonar"
             }
-        }  
+          
          }
         stage('Deploy') {
             steps {
