@@ -24,8 +24,8 @@ pipeline {
             }
         }
       
-         stage('execute sonarqube report') {
-            steps {
+         stage('executesonarqubereport') {
+             {
                 // Run tests
                 nodejs(nodeJSInstallationName: 'nodejs18.6.0'){
                 sh "npm run sonar"
