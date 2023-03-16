@@ -24,7 +24,7 @@ pipeline {
             }
         }
       
-         stage('EXECute sonarqube reort ') {
+         stage('execute sonarqube report') {
             steps {
                 // Run tests
                 nodejs(nodeJSInstallationName: 'nodejs18.6.0'){
