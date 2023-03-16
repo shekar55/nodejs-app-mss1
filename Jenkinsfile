@@ -1,7 +1,8 @@
 pipeline {
     agent any
-    nodejs(nodeJSInstallationName: 'nodejs18.6.0'){
-    }
+ tools {
+  nodejs 'nodejs18.6.0'
+}
 
     stages {
         stage('Build') {
